@@ -7,13 +7,9 @@
     "dev": "webpack",
     "lint": "eslint --ext .js,.jsx.,.ts,.tsx ./src",
     "start": "webpack serve",
-    "test": "jest"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test && npm run lint",
-      "pre-push": "npm test && npm run lint"
-    }
+    "test": "jest",
+    "prepare": "husky install",
+    "create-hook": "husky add .husky/pre-commit \"npm test && npm run lint\""
   },
   "keywords": [],
   "author": "",

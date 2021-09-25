@@ -15,6 +15,9 @@ module.exports = {
     path: PATH.public,
     filename: 'index.js',
   },
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx']
+  } 
   devServer: {
     watchFiles: `${PATH.public}/*.*`,
     compress: true,

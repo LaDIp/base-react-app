@@ -1,12 +1,8 @@
 import React from 'react'
-import ReactDOM from ' 
-react- dom'
+import ReactDOM from 'react-dom'
+import sum from 'sum'
 
-ReactDOM.render(<h1>Привет, мир</h1>, document.getElementById('root'))
-
-  // "husky": {
-  //   "hooks": {
-  //     "pre-commit": "npm test && npm run lint",
-  //     "pre-push": "npm test && npm run lint"
-  //   }
-  // },
+ReactDOM.render(
+  <h1>Привет, мир{sum(1, 2)}</h1>,
+  document.getElementById('root'),
+)

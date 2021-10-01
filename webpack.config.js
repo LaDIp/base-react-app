@@ -16,8 +16,9 @@ module.exports = {
     filename: 'index.js',
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx']
-  } 
+    modules: [PATH.src, 'node_modules'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+  },
   devServer: {
     watchFiles: `${PATH.public}/*.*`,
     compress: true,
@@ -33,7 +34,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx$/,
+        test: /\.(ts|tsx)$/,
         loader: 'babel-loader',
         exclude: '/node_modules/',
       },
